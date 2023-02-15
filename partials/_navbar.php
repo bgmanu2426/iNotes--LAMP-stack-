@@ -56,14 +56,13 @@ echo '
       <div class="modal-content">
         <form action="partials/_delAccount.php" method="post">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="deleteallModallLabel">Delete Note</h1>
+            <h1 class="modal-title fs-5" id="deleteallModallLabel">Delete your account</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <p>Are you sure you want to delete your account permanently?
               You may loose all of your data by deleting the account.
             </p>
-            <label class="form-check-label" for="flexCheckDefault">Check the box to continue</label>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Back</button>
