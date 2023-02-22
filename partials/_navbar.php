@@ -7,14 +7,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 echo '<ul class="nav bg-dark bg-gradient">
 <li class="nav-item my-2 mx-2">
-  <a class="nav-link text-light" aria-current="page" href="home.php"><strong>Home</strong></a>
+  <a class="nav-link text-light" aria-current="page" href="index.php"><strong>Home</strong></a>
 </li>
 ';
 
 if (!$loggedin) {
   echo '
 <li class="nav-item my-2 mx-2">
-  <a class="nav-link text-light" aria-current="page" href="home.php"><strong>Login</strong></a>
+  <a class="nav-link text-light" aria-current="page" href="index.php"><strong>Login</strong></a>
 </li>
 ';
 }

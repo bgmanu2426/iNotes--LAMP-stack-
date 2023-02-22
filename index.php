@@ -12,16 +12,8 @@ $update = false;
 $delete = false;
 
 // Connection to the database
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "inotes";
+include 'partials/_dbconnect.php';
 
-// Establish a connection with database and raise error if unsuccessful
-$connection = mysqli_connect($servername, $username, $password, $database);
-if (!$connection) {
-  echo "Failed to connect to the database -->" . mysqli_connect_error();
-}
 //Variable to fetch users table to store user data
 $tb_name = $_SESSION['email'];
 
@@ -83,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <form action="home.php" method="POST">
+          <form action="index.php" method="POST">
             <input type="hidden" name="slnoEdit" id="slnoEdit">
             <div class="mb-3 my-3">
               <label for="titleEdit" class="form-label">Note Title</label>
@@ -107,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form action="home.php" method="GET">
+        <form action="index.php" method="GET">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="deleteModallLabel">Delete Note</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -144,7 +136,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <h6>Welcome to iNotes <?php echo $_SESSION['name']; ?> now you can start adding notes</h6>
     </center>
     <h3>Add a Note</h3>
-    <form action="home.php" method="POST">
+    <form action="index.php" method="POST">
       <div class="mb-3 my-3">
         <label for="title" class="form-label">Note Title</label>
         <input type="text" class="form-control" id="title" name="title">
@@ -232,7 +224,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $('#deleteModal').modal('toggle');
         slno = e1.target.id.substr(1, );
         document.getElementById('delBtn').onclick = function() {
-          window.location = `/home.php?delete=${slno}`;
+          window.location = `/index.php?delete=${slno}`;
         }
       })
     })

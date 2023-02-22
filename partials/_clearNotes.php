@@ -5,5 +5,5 @@ session_start();
 $email = $_SESSION['email'];
 $sql = "TRUNCATE TABLE `inotes`.`$email`";
 $result = mysqli_query($connection,$sql);
-header("location: ../home.php");
+header("location: ../index.php");
 ?>

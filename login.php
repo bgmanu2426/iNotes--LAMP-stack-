@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $_SESSION['loggedin'] = true;
     $_SESSION['email'] = $email;
     $_SESSION['name'] = $fetch['name'];
-    header("location: home.php");
+    header("location: index.php");
   } else {
     $showError = true;
   }
