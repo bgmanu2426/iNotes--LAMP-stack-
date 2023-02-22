@@ -232,7 +232,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $('#deleteModal').modal('toggle');
         slno = e1.target.id.substr(1, );
         document.getElementById('delBtn').onclick = function() {
-          window.location = `/inotes/home.php?delete=${slno}`;
+          window.location = `/home.php?delete=${slno}`;
         }
       })
     })
