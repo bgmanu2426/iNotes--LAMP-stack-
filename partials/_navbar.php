@@ -27,7 +27,7 @@ if ($loggedin) {
   <a class="dropdown-item" href="profile.php">Profile</a>
   <a class="dropdown-item" href="partials/_logout.php">Logout</a>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="partials/_clearNotes.php">Clear all Notes</a>
+  <a class="dropdown-item" href="partials/_clearNotes.php"> Clear all Notes</a>
   <button type="button" id="delall" onclick="deleteaccount()" class="btn">Delete account</button>
 </li>';
 }
@@ -54,7 +54,7 @@ echo '
   <div class="modal fade" id="deleteallModal" tabindex="-1" aria-labelledby="deleteallModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <form action="partials/_delAccount.php" method="post">
+        <form action="/partials/_delAccount.php" method="post">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="deleteallModallLabel">Delete your account</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -72,15 +72,13 @@ echo '
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   <script>
     function deleteaccount() {
       document.getElementById('delall');
       $('#deleteallModal').modal('toggle');
       document.getElementById('delallBtn').onclick = function() {
-        window.location = `/partials/_delAccount.php`;
+        window.location = `partials/_delAccount.php`;
       }
     }
   </script>
