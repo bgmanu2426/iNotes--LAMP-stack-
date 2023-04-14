@@ -21,3 +21,8 @@ Download this file and save in in XAMPP/htdocs location and open it in any code 
     http://localhost/inotes
 ```
 
+* To open the MySQL database open the below URL
+
+```http
+    http://localhostphpmyadmin
+```
