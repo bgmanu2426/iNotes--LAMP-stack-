@@ -24,5 +24,5 @@ Download this file and save in in XAMPP/htdocs location and open it in any code 
 * To open the MySQL database open the below URL
 
 ```http
-    http://localhostphpmyadmin
+    http://localhost/phpmyadmin
 ```
